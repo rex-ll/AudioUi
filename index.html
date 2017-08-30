@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>H5 语音播放</title>
+    <link rel="stylesheet" href="css/ctraudio.css">
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="audio">
+    <audio src="" preload hidden data-id="1"></audio>
+    <div class="audio-area">
+        <div class="audio-length"></div>
+        <div class="audio-play"></div>
+    </div>
+    <i class="audio-unread"></i>
+    <div class="audio-load-bg">
+        <div class="audio-loader"></div>
+    </div>
+</div>
+<div class="audio">
+    <audio src="audio/demo.wav" preload hidden data-id="2"></audio>
+    <div class="audio-area">
+        <div class="audio-length"></div>
+        <div class="audio-play"></div>
+    </div>
+    <i class="audio-unread"></i>
+    <div class="audio-load-bg">
+        <div class="audio-loader"></div>
+    </div>
+</div>
+<div class="audio">
+    <audio src="" preload hidden data-id="3"></audio>
+    <div class="audio-area">
+        <div class="audio-length"></div>
+        <div class="audio-play"></div>
+    </div>
+    <i class="audio-unread"></i>
+    <div class="audio-load-bg">
+        <div class="audio-loader"></div>
+    </div>
+</div>
+<script src="js/ctraudio.js"></script>
+<script>
+    $('.audio:first-of-type').ctrAudio({
+        autoplay:false,
+        src:'audio/wav.wav'
+    });
+    $('.audio:nth-of-type(2)').ctrAudio({
+        autoplay:true
+    });
+    $('.audio:last-of-type').ctrAudio({
+        autoplay:false,
+        src:'audio/mp3.mp3'
+    });
+</script>
+</body>
+</html>
